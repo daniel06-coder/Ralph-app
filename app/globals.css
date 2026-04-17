@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+ /* background-color: #0e0e0e; */
+ /* background-color: #161616; */
+ background-color: #191919;
+  color: white;
+ 
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: translateX(-10px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+
+
+
+
+
+
+/* 
+🎨 1️⃣ Understanding the 60–30–10 Rule
+%	Role	Meaning
+60% (Black)	Dominant color	Sets the general tone and background feel of the site.
+30% (White)	Secondary color	Balances the dark tones and adds breathing space.
+10% (Red)	Accent color	Draws attention — used sparingly for highlights, actions, or important elements.
+🧱 2️⃣ Where to Apply Each Color
+
+Let’s go section by section 👇
+
+Element	Recommended Color	Why
+Website Background	🖤 Black (60%)	Gives your site a bold, elegant base. You can use solid black #000 or a very dark gray #0e0e0e for comfort.
+Text	⚪ White (30%)	High contrast on black, ensuring readability. Use slightly off-white (#f5f5f5) for long paragraphs.
+Headings / Titles	⚪ White or ❤️ Red (accent)	White keeps consistency; Red adds emphasis to key titles or section headers.
+Navbar / Menu Bar	🖤 Black background with ⚪ white links	Clean, professional look. Add a thin ❤️ red border-bottom or hover effect for style.
+Buttons (Primary)	❤️ Red background, ⚪ White text	The red draws immediate attention — perfect for CTAs (e.g., “Contact Me”, “Buy Now”).
+Buttons (Secondary)	⚪ White background, 🖤 Black text, ❤️ Red border on hover	Keeps contrast while maintaining the 10% red limit.
+Borders / Dividers / Lines	⚪ White or low-opacity ❤️ Red	Use subtle lines to separate sections or cards without clutter.
+Overlays / Cards / Sections	🖤 Semi-transparent black (e.g. rgba(0,0,0,0.8))	Keeps your sections readable over videos or images.
+Shadows / Depth	❤️ Red-tinted shadow (rgba(255,0,0,0.2)) or neutral gray shadow	Adds modern detail without breaking your scheme.
+Links / Hover effects	❤️ Red on hover	Red naturally draws attention to interactivity.
+✨ 3️⃣ Sample Visual Hierarchy (Layout Feel)
+
+Background: #0b0b0b (black)
+
+Main text: #f5f5f5 (white)
+
+Section titles: #ffffff or #e50914 (Netflix-style red)
+
+Buttons: red (#e50914) with white text
+Hover → white background, red border, red text
+
+Navbar: black background with white links
+Active/hover link → red underline or text
+
+Cards: dark gray background with white text and red highlights
+
+🧠 4️⃣ Pro Design Tips
+
+Use red sparingly (around 10%). Too much red loses its power.
+
+Mix in different shades of black (pure black for backgrounds, grayish black for content areas).
+
+Add white spacing generously — white and negative space make dark designs breathe.
+
+Use animations or hover effects in red — it makes the accent feel lively and intentional.
+*/
