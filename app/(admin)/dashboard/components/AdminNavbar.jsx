@@ -31,7 +31,7 @@ function AdminNavbar() {
             Dashboard
           </Link>
           <Link
-            href={"/admin/uploads"}
+            href={"/dashboard/uploads"}
             className="flex  items-center gap-3 text-lg font-[400]"
           >
             <IoCloudUploadOutline />

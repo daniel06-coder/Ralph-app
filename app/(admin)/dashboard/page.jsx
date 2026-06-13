@@ -1,11 +1,11 @@
 import React from 'react'
 
-function BookPayment() {
+function page() {
   return (
     <div>
-      hi
+      
     </div>
   )
 }
 
-export default BookPayment
+export default page

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UploadVideos() {
+function page() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function UploadVideos() {
   )
 }
 
-export default UploadVideos
+export default page

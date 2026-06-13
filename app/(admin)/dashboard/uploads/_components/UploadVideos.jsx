@@ -1,12 +1,13 @@
-import React from 'react'
-import { BsCloudUpload } from "react-icons/bs";
-import { IoMdPaperPlane } from 'react-icons/io';
+import React from "react";
+import { BsCameraVideo, BsPlusCircle } from "react-icons/bs";
+import { IoMdPaperPlane } from "react-icons/io";
+// import { MdOndemandVideo } from "react-icons/md";
 
-function UploadArtworks() {
+const UploadVideos = () => {
   return (
     <main className="w-full ">
       <div className="w-full h-full flex flex-col gap-3">
-        <h1 className="text-xl uppercase font-[400]">Upload File</h1>
+        <h1 className="text-xl uppercase font-[400]">Upload Videos</h1>
 
         <div className="flex justify-between w-full gap-2">
           {/* glossy background */}
@@ -22,7 +23,7 @@ function UploadArtworks() {
                 type="file"
               />
               <div className="flex flex-col justify-center items-center">
-                <BsCloudUpload className="text-[10rem] text-red-600" />
+                <BsCameraVideo className="text-[10rem] text-red-600" />
                 <p className="text-gray-300 uppercase text-sm">
                   Drag and drop / click to upload
                 </p>
@@ -41,7 +42,7 @@ function UploadArtworks() {
               <input
                 type="text"
                 className="p-2 border  border-white/40 outline-none placeholder:text-sm  text-sm"
-                placeholder="Artwork Title"
+                placeholder="Video Title"
               />
 
               <label
@@ -53,11 +54,28 @@ function UploadArtworks() {
               <textarea
                 name="Description"
                 className="resize-none p-2 border  border-white/40 outline-none placeholder:text-sm text-sm"
-                placeholder="Describe your Art......."
+                placeholder="Describe your Video......."
                 cols={20}
                 rows={5}
                 id=""
               ></textarea>
+
+              <div className="flex justify-between">
+                <div className="border border-white/40 w-full relative flex items-center justify-center">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    // onChange={}
+                    className="absolute inset-0 opacity-0"
+                  />
+                  <div className="flex jusitify-center items-center py-3 gap-2">
+                    <BsPlusCircle />
+                    <p className="text-lg font-[200] text-white/80">
+                      Upload Thumbnail
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               <div className="flex  justify-between w-full absolute bottom-0">
                 <button className="px-4 py-2  bg-red-500/40">Cancel</button>
@@ -68,9 +86,11 @@ function UploadArtworks() {
             </form>
           </div>
         </div>
+
+    
       </div>
     </main>
   );
-}
+};
 
-export default UploadArtworks
+export default UploadVideos;

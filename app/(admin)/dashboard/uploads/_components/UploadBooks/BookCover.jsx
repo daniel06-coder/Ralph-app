@@ -1,20 +1,44 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import { BsPlusCircle } from "react-icons/bs";
+import { useBook } from "@/context/BookContext";
+import { uploadImage } from "@/lib/cloudinary";
 const BookCover = () => {
   const selectCategories = [
-    { label: "Action", select:"checkbox" },
-    { label: "Thriller", select:"checkbox" },
-    { label: "Romance", select:"checkbox" },
-    { label: "Comedy", select:"checkbox" },
-    { label: "Psycological", select:"checkbox" },
-    { label: "Adventure", select:"checkbox" },
-    { label: "School", select:"checkbox" },
-    { label: "History", select:"checkbox" },
-    { label: "Horror", select:"checkbox" },
+    { label: "Action" },
+    { label: "Adventure" },
+    { label: "Autobiography"},
+    { label: "Comedy"},
+    { label: "Crime" },
+    { label: "Drama" },
+    { label: "Fantasy"},
+    { label: "Fiction" },
+    { label: "Historical" },
+    { label: "History" },
+    { label: "Horror" },
+    { label: "Mystery" },
+    { label: "Naija matter" },
+    { label: "Non-fiction" },
+    { label: "Psycological"},
+    { label: "Romance"  },
+    { label: "School" },
+    { label: "Sci-fi"},
+    { label: "Slice of life" },
+    { label: "Sport" },
+    { label: "Superhero" },
+    { label: "Thriller"},
 ];
+const handleGenreChange =(label) => {
+  const current = bookData.genres || [];
+  const updated = current.includes(label) ? current.filter((g) => g !== label) : [...current, label];
+  updateBookData("genres", updated)
+}
 
 const [frontCover, setFrontCover] = useState(null)
 const [backCover, setBackCover] = useState(null)
+const [dropDownBtn , setDropDownBtn] = useState(false)
+const [selectOption, setSelectOption] = useState("Select an Option")
+
 
 const handleFileChange = (e, type) => {
  const file = e.target.files[0];
@@ -30,6 +54,20 @@ const handleFileChange = (e, type) => {
   }
  }
 }
+
+
+const {bookData, updateBookData} = useBook();
+const filterPagesSent =  ["comics", "visual novel", "manga", "light novel"]
+
+
+const dropDownFunction = () => {
+  setDropDownBtn(!dropDownBtn);
+};
+
+const handleOptionClicked =  (filterPagesSent)=> {
+  setSelectOption(filterPagesSent)
+  setDropDownBtn(false);
+}
 // useEffect(() => {
 //   return () => {
 //     if (frontCover) URL.revokeObjectURL(frontCover);
@@ -41,7 +79,7 @@ const handleFileChange = (e, type) => {
     <main>
       <div className=" flex justify-between px-1 pb-10">
         <h1 className="text-2xl ">Upload Book</h1>
-        <select
+        {/* <select
           name=""
           id=""
           className="bg-red-800/70 hover:bg-red-800 text-white/80 w-[10rem] border-none outline-none px-1  "
@@ -55,9 +93,35 @@ const handleFileChange = (e, type) => {
           <option value="Manga" className="bg-red-900 ">
             Manga
           </option>
-        </select>
+        </select> */}
+        <div
+          className={`flex flex-col gap-1 items-center relative border-t border-x border-red-600 ${dropDownBtn ? "" : "border-b"}`}
+        >
+          <button onClick={dropDownFunction} className="w-[10rem] px-3 py-1 ">
+            <h2 className=" ">{selectOption}</h2>
+          </button>
+          {dropDownBtn && (
+            <div
+              className={`flex flex-col gap-2 absolute w-[10.1rem] border-b border-x  border-red-600 md:my-8 transition-full   `}
+            >
+              {filterPagesSent.map((select) => (
+                <button
+                  key={select}
+                  onClick={async () => {
+                    handleOptionClicked(select);
+                    updateBookData("filter", select);
+                  }}
+                  className={` py-1    ${bookData.filter === select ? "active bg-red-700" : ""}`}
+                >
+                  {select}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
+      {/* Book title */}
       <div className="flex flex-col gap-10">
         <form action="" className="flex flex-col gap-3">
           <div className="flex gap-4 items-center">
@@ -66,33 +130,49 @@ const handleFileChange = (e, type) => {
             </label>
             <input
               type="text"
+              value={bookData.title}
+              onChange={(e) => updateBookData("title", e.target.value)}
               className="w-sm p-1 border-b border-gray-500 outline-none"
             />
           </div>
 
+          {/* Author */}
           <div className="flex gap-4 items-center">
             <label htmlFor="Author" className="font-semibold text-xl">
               Author
             </label>
             <input
               type="text"
+              value={bookData.author}
+              onChange={(e) => updateBookData("author", e.target.value)}
               className="w-sm p-1 border-b border-gray-500 outline-none"
             />
           </div>
 
+          {/* Genre */}
           <div className="flex w-full flex-col py-5">
             <h2 className="font-semibold text-xl">Categories</h2>
             <div className="grid grid-cols-3  place-center gap-2 lg:w-[35%] py-2">
               {selectCategories.map((item, index) => {
                 return (
                   <div key={index} className="flex gap-1 items-center">
+                    <input
+                      type="checkbox"
+                      id={item.label}
+                      checked={bookData.genres?.includes(item.label) || false}
+                      onChange={() => handleGenreChange(item.label)}
+                    />
                     <label htmlFor="Action">{item.label}</label>
-                    <input type={item.select} />
                   </div>
                 );
               })}
             </div>
+
+            <p className=" text-gray-400">
+              Selected: {bookData.genres?.join(", ") || "None"}
+            </p>
           </div>
+          {/* Description */}
           <div className="flex gap-4 ">
             <label htmlFor="Description" className="font-semibold text-xl">
               Description
@@ -102,6 +182,8 @@ const handleFileChange = (e, type) => {
               cols={10}
               rows={3}
               id=""
+              value={bookData.description}
+              onChange={(e) => updateBookData("description", e.target.value)}
               className="p-2 resize-none w-sm p-1 border border-gray-500 outline-none"
             ></textarea>
           </div>
@@ -118,7 +200,13 @@ const handleFileChange = (e, type) => {
                 <input
                   type="file"
                   accept="image/*"
-                  onChange={(e) => handleFileChange(e, "front")}
+                  onChange={async (e) => {
+                    handleFileChange(e, "front");
+                    const urlFront = await uploadImage(
+                      e.target.files[0],
+                    );
+                    updateBookData("frontCover", urlFront);
+                  }}
                   className="absolute inset-0 opacity-0"
                 />
                 <div className="flex jusitify-center items-center py-3 gap-2">
@@ -130,7 +218,11 @@ const handleFileChange = (e, type) => {
               <div className="border relative flex items-center justify-center">
                 <input
                   accept="image/"
-                  onChange={(e) => handleFileChange(e, "back")}
+                  onChange={async (e) => {
+                    handleFileChange(e, "back");
+                    const urlBack = await uploadImage(e.target.files[0]);
+                    updateBookData("backCover", urlBack);
+                  }}
                   type="file"
                   className="absolute inset-0 opacity-0"
                 />
@@ -159,7 +251,7 @@ const handleFileChange = (e, type) => {
               )}
               {/* Back cover */}
               {backCover ? (
-                <div className=" border-2 border-red-700 border-dotted h-[12rem] w-[9rem] flex justify-center items-center">
+                <div className="  h-[12rem] w-[9rem] flex justify-center items-center">
                   <img src={backCover} alt="back Preview" />
                 </div>
               ) : (

@@ -40,6 +40,43 @@ body {
 }
 
 
+.image-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap:4px;
+  padding: 10px;
+  width: 100%;
+}
+.grid-item{
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1px;
+}
+.grid-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* mansory effect */
+/* .mansory-container{
+  columns: 4;
+  column-gap: 16px;
+}
+.item{
+  margin-bottom: 16px;
+  break-inside: avoid;
+} */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+ 
+}
 
 
 

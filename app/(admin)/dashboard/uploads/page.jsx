@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from "framer-motion";
 import UploadArtworks from './_components/UploadArtworks';
 import { IoBookSharp } from 'react-icons/io5'
@@ -20,6 +20,18 @@ const uploadLists = [
 
 const  page = () => {
   const [activeTab, setActiveTab] = useState("Art");
+
+  useEffect(() => {
+    const savedPage = localStorage.getItem("currentPage");
+
+    if (savedPage) {
+      setActiveTab(savedPage);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('currentPage', activeTab)
+  }, [activeTab])
 
   // showCurrentTab === renderTab
   const showCurrentTab = () => {
