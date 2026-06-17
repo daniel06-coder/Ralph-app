@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 import React from 'react'
 import BookStepper from './BookStepper';
 import { BookProvider } from '@/context/BookContext';

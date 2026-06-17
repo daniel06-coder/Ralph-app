@@ -28,6 +28,7 @@ const BookCover = () => {
     { label: "Superhero" },
     { label: "Thriller"},
 ];
+
 const handleGenreChange =(label) => {
   const current = bookData.genres || [];
   const updated = current.includes(label) ? current.filter((g) => g !== label) : [...current, label];
@@ -121,9 +122,9 @@ const handleOptionClicked =  (filterPagesSent)=> {
         </div>
       </div>
 
-      {/* Book title */}
       <div className="flex flex-col gap-10">
         <form action="" className="flex flex-col gap-3">
+          {/* Book title */}
           <div className="flex gap-4 items-center">
             <label htmlFor="Title" className="font-semibold text-xl">
               Title
@@ -202,9 +203,7 @@ const handleOptionClicked =  (filterPagesSent)=> {
                   accept="image/*"
                   onChange={async (e) => {
                     handleFileChange(e, "front");
-                    const urlFront = await uploadImage(
-                      e.target.files[0],
-                    );
+                    const urlFront = await uploadImage(e.target.files[0]);
                     updateBookData("frontCover", urlFront);
                   }}
                   className="absolute inset-0 opacity-0"
