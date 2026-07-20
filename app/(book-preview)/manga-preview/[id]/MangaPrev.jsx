@@ -1,7 +1,10 @@
 import { BookHeart, Bookmark, BookOpen, Download, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-function MangaPrev({ previewManga }) {
+const MangaPrev = ({ previewManga }) => {
+
+ 
+
   return (
     <main>
       <div className="md:flex md:justify-between max-md:flex-col  ">
