@@ -1,12 +1,18 @@
 'use client'
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link'
 import React, { useState } from 'react'
+import { CgProfile } from 'react-icons/cg';
 import { GrReturn } from 'react-icons/gr';
 import { IoReturnDownBackOutline } from 'react-icons/io5';
 
 const StoriesNavigation = () => {
+   const {data: session, status} = useSession()
+
 
     const [showClicked, setShowClicked ] = useState(null);
+      const [modal, setModal] = useState(false);
+      const handleModal = (x) => setModal(!modal ? x : false)
 
     const buttons = [
       { id: 1, label: "Manga", url: "/discover-stories/manga" },
@@ -16,7 +22,7 @@ const StoriesNavigation = () => {
 
   return (
     <main>
-      <nav className="flex bg-[#161616]/50 backdrop-blur-sm  justify-between items-center px-2 py-3   h-12 w-full ">
+      <nav className="flex bg-[#161616]/50 backdrop-blur-sm  justify-between items-center px-3 py-3   h-12 w-full ">
         <Link href={"/"}>
           <GrReturn />
         </Link>
@@ -33,6 +39,33 @@ const StoriesNavigation = () => {
             </Link>
           ))}
         </div>
+
+            <div className="relative ">
+                        <button onClick={handleModal}>
+                          <img
+                            src={session?.user?.image}
+                            alt={
+                              session?.user?.name
+                                ? String(session.user.name).slice(0, 2).toUpperCase()
+                                : "User"
+                            }
+                            className="rounded-full h-6 w-6 lg:h-8 lg:w-8  "
+                          />
+                        </button>
+          
+                        {modal && (
+                          <div className="absolute z-10  w-[8rem] max-md:text-sm max-md:w-[5rem] rounded-sm  bg-red-700 text-white/80  flex flex-col px-3 py-2 max-md:py-1 max-md:gap-1 gap-2 right-0  items-center pointer">
+                            <div className="flex items-center">
+                              <CgProfile />
+                              <Link href={"/#"} className="">
+                                {" "}
+                                Profile{" "}
+                              </Link>
+                            </div>
+                            <button onClick={() => signOut("google")}>Sign Out</button>
+                          </div>
+                        )}
+                      </div>
       </nav>
     </main>
   );
