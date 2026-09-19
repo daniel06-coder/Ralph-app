@@ -22,7 +22,7 @@ const page = () => {
     {
       label: "Uzoma Rapheal",
       role: "Founder",
-      img: "/ralphimage.jpeg",
+      img: "/profile/user.jpeg",
       url: "/main",
       founder: true,
       fSmall: true,
@@ -30,63 +30,63 @@ const page = () => {
     {
       label: "Uzoma Rapheal",
       role: "Founder",
-      img: "/ralphpass.jpeg",
+      img: "/profile/user.jpeg",
+      url: "/main",
+    },
+    {
+      label: "Akujuobi Valantine",
+      role: "Graphic Designer",
+      img: "/profile/Aphix.jpeg",
       url: "/main",
     },
     {
       label: "Uzoma Rapheal",
       role: "Founder",
-      img: "/ralphpass.jpeg",
-      url: "/main",
-    },
-    {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphimage.jpeg",
+      img: "/profile/ralphimage.jpeg",
       url: "/main",
       founder: true,
       fLarge: true,
     },
     {
-      label: "Uzoma Rapheal",
+      label: "Anyanwu Daniel",
       role: "Developer",
-      img: "/ralphpass.jpeg",
+      img: "/profile/DanielA.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/ralphpass.jpeg",
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
       url: "/main",
     },
   ];
@@ -99,10 +99,10 @@ const page = () => {
           {/* the first card is the div below */}
           <div className="max-lg:relative max-lg:top-25 max-md:top-0 flex flex-col justify-start py-3 lg:w-[35%]   max-md:shadow-none md:shadow md:shadow-black/90  ">
             <div className=" flex flex-col max-lg:flex-col-reverse ">
-              <div className="flex flex-col  max-md:hidden lg:text-left text-center gap-4  px-7  lg:py-4  w-full lg:border-b ">
-                <h2 className="text-[3rem]">Team Logo</h2>
+              <div className="flex flex-col  max-md:hidden lg:items-start item-center gap-2  px-7  lg:py-4  w-full lg:border-b ">
+                <h2 className="text-[2rem] uppercase">The Best Team</h2>
                 <h2 className="text-[2rem]">Presents</h2>
-                <h2 className="text-[3rem]">Brand Name</h2>
+                <img src="/Our Art Is Yours logo.png" alt="" className="md:h-[7rem] md:w-[14rem] object-contain" />
               </div>
 
               <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
@@ -127,9 +127,9 @@ const page = () => {
                   </div>
 
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ipsam omnis aspernatur doloribus in deserunt modi
-                    accusantium illo similique.
+                    Our Services cater to diverse audiences including fans,
+                    authors, creators, publishers, brands, studios and
+                    businesses
                   </p>
                 </div>
               </div>
@@ -161,9 +161,8 @@ const page = () => {
                 </div>
 
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  omnis aspernatur doloribus in deserunt modi accusantium illo
-                  similique.
+                  Our Art is yours is a creative brand encompassing culture, top
+                  notch storytelling, education and entertainment.
                 </p>
               </div>
             </div>
@@ -262,11 +261,18 @@ const page = () => {
           {/* our location and FaQ directory button below, this should be flexed  */}
           <div className=" max-lg:hidden absolute bottom-65 w-[63%] gap-10 shadow  shadow-black/90 flex justify-between py-3 px-5  ">
             <div className="flex flex-col w-[50%]">
-              <h2 className="text-xl uppercase font-bold py-2">Our Location</h2>
+              <h2 className="text-xl uppercase font-bold py-2">
+                BUSSINESS LOCATION{" "}
+              </h2>
               <p className="text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia
-                corporis voluptatem laboriosam harum quidem quam odit possimus
-                eaque quos fugit.
+                From the day of it's inception, our business is located here on
+                our business official website at{" "}
+                <a href="#" className="underlined">
+                  www.ourartisyours.com.{" "}
+                </a>{" "}
+                On our different social media handles and on internet web
+                stores. In the coming years, while still being on the internet,
+                we would have key offices all over africa.
               </p>
             </div>
 
@@ -312,7 +318,7 @@ const page = () => {
 
               <div className="flex flex-col gap-1">
                 <Link
-                  href={"/main/faq"}
+                  href={"/home/faq"}
                   className="flex w-full hover:bg-white/20 transform transition-all duration-500  items-center px-2 border py-2 pointer"
                 >
                   <button className="text-lg max-lg:text-sm w-[95%]  text-left">
@@ -398,10 +404,10 @@ const page = () => {
         <div className="flex max-md:flex-col md:justify-between w-full md:px-2 py-4 gap-6 md:gap-2 ">
           <div className="md:w-[50%] flex flex-col gap-2 ">
             <h1 className="md:text-xl text-lg max-md:px-1 text-red-600">
-              Our Dream
+              OUR DREAM,
             </h1>
             <p className="md:text-2xl text-xl max-md:px-1 font-semibold">
-              What do we hope to achive<span className="text-red-600">?</span>
+              WHAT WE HOPE TO ACCOMPLISH<span className="text-red-600">?</span>
             </p>
             {/* the background of the below div is gonna be a video and text will be ontop with two button below askig to watch the video or countinue reading */}
             <div className="relative w-full">
@@ -422,22 +428,13 @@ const page = () => {
               <div className="inset-0 bg-black/80 absolute backdrop-blur-sm"></div>
               <div className="absolute top-0 left-0 h-full pt-1 md:pt-3 flex flex-col md:gap-4 gap-2 ">
                 <p className="md:text-lg text-[0.9rem] px-2 text-white/90 ">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Aliquam animi in modi totam aut vero rem beatae. Perspiciatis
-                  harum rem eaque, aspernatur modi atque minus temporibus.
-                  Temporibus suscipit fuga quis perferendis molestiae porro
-                  fugit minima nobis est accusantium, alias necessitatibus
-                  quidem, vero voluptatem, dolores quae dicta veritatis eveniet?
-                  Libero doloribus nemo ad ex voluptatum totam delectus,
-                  deleniti autem provident corporis cupiditate. Illo minus ea
-                  libero vitae placeat dicta cumque, iste consequatur beatae
-                  repellat? Totam amet soluta necessitatibus placeat, nemo animi
-                  dignissimos a laudantium voluptate. Eos explicabo
-                  <span className="max-md:hidden">
-                    vitae fuga! Fuga, itaque? Sapiente est corrupti illum
-                    dolorem, repellat praesentium debitis omnis
-                    voluptatem............
-                  </span>
+                  We are working towards becoming a world class brand that would
+                  elevate creativity in Africa with an emphasis on different art
+                  forms and mediums. A brand that would push the boundaries of
+                  Animation technology and Computer Generated Imagery (CGI) in
+                  Africa while also encompassing culture, top notch
+                  storytelling, entertainment, education as well as the ability
+                  to positively impact and resonate with different demographics.
                 </p>
                 <div className="flex justify-center gap-10 mb-auto">
                   <button className="md:px-4 px-2  py-2 bg-red-700 text-sm text-white/90 rounded-sm">
@@ -631,8 +628,7 @@ const page = () => {
 
           <div className="md:w-[50%] flex flex-col gap-4 text-right">
             <h1 className="md:text-2xl text-xl max-md:px-1 font-semibold text-center md:text-right">
-              Why Choose Us And{" "}
-              <span className="text-red-600"> Our Team ?</span>
+              WHY CHOOSE US AND<span className="text-red-600">OUR TEAM ?</span>
             </h1>
             {/* the background of the below div is gonna be a video and text will be ontop with two button below askig to watch the video or countinue reading */}
             <div className="relative w-full">
@@ -653,22 +649,12 @@ const page = () => {
               <div className="inset-0 bg-black/80 absolute backdrop-blur-sm"></div>
               <div className="absolute top-0 left-0 h-full pt-1 md:pt-3 flex flex-col md:gap-4 gap-2 ">
                 <p className="md:text-lg text-[0.9rem] px-2 text-white/90 ">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Aliquam animi in modi totam aut vero rem beatae. Perspiciatis
-                  harum rem eaque, aspernatur modi atque minus temporibus.
-                  Temporibus suscipit fuga quis perferendis molestiae porro
-                  fugit minima nobis est accusantium, alias necessitatibus
-                  quidem, vero voluptatem, dolores quae dicta veritatis eveniet?
-                  Libero doloribus nemo ad ex voluptatum totam delectus,
-                  deleniti autem provident corporis cupiditate. Illo minus ea
-                  libero vitae placeat dicta cumque, iste consequatur beatae
-                  repellat? Totam amet soluta necessitatibus placeat, nemo animi
-                  dignissimos a laudantium voluptate. Eos explicabo
-                  <span className="max-md:hidden">
-                    vitae fuga! Fuga, itaque? Sapiente est corrupti illum
-                    dolorem, repellat praesentium debitis omnis
-                    voluptatem............
-                  </span>
+                  You should trust us because with our collective interests and
+                  efforts we can establish a creative hub and community that can
+                  not only assists people discover, develop and monetize their
+                  creative talents or skills but one that can inspire, inform,
+                  educate, entertain as well as assist Africa to rethink the way
+                  we view Artist's and Creativity.
                 </p>
                 <div className="flex justify-center gap-10 mb-auto">
                   <button className="md:px-4 px-2  py-2 bg-red-700 text-sm text-white/90 rounded-sm">

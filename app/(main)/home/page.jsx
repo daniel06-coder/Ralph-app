@@ -163,14 +163,14 @@ const page = () => {
   ]
 
  const images = [
-  {img:"/slide1.jpg", phoneImg:"/phoneslide1.png"},
-  {img:"/slide2.jpg", phoneImg:"/phoneslide2.png"},
-  {img:"/slide6.jpg", phoneImg:"/phoneslide3.jpg"},
-  {img:"/slide7.jpg", phoneImg:"/phoneslide4.png"},
-  {img:"/slide8.jpg", phoneImg:"/phoneslide5.jpg"},
-  {img:"/slide9.jpg", phoneImg:"/phoneslide6.png"},
-  {img:"/slide10.jpg",phoneImg:"/phoneslide7.jpg"},
- ]
+   { img: "/slide1.jpg", phoneImg: "/img/image (33).jpeg" },
+   { img: "/slide2.jpg", phoneImg: "/img/image (42).jpeg" },
+   { img: "/slide6.jpg", phoneImg: "/img/image (30).jpeg" },
+   { img: "/slide7.jpg", phoneImg: "/img/image (28).jpeg" },
+   { img: "/slide8.jpg", phoneImg: "/img/image (37).jpeg" },
+   { img: "/slide9.jpg", phoneImg: "/img/image (39).jpeg" },
+   { img: "/slide10.jpg", phoneImg: "/img/image (40).jpeg" },
+ ];
 
    const firstFooterList = [
         {label: "Creative Art", icon: "/next.svg" , subItems:
@@ -329,26 +329,28 @@ const page = () => {
 
        <div className="absolute top-0 bg-black/80 flex lg:pt-20   flex-col  inset-0 p-3">
          <div className=" flex justify-center max-lg:h-full max-lg:p-2 max-md:text-center max-md:gap-8 lg:gap-8 md:gap-10 flex-wrap items-center flex-col ">
-           <h1 className="text-[3rem] max-lg:text-[2rem] font-extrabold  uppercase">
-             Unlock Your creative side
+           <h1 className="text-[3rem] text-white max-lg:text-[2rem] font-extrabold  uppercase">
+             Unl<span className="text-red-600">o</span>ck Y
+             <span className="text-red-600">o</span>ur creat
+             <span className="text-red-600">i</span>ve s
+             <span className="text-red-600">i</span>de
            </h1>
-           <div className=" w-full   flex flex-col justify-center gap-2 ">
-             <p className="text-sm text-white/70  text-xl font-semibold">
+           <div className=" w-full   flex flex-col justify-center items-center gap-2 ">
+             <p className="text-sm text-red-600 text-xl font-semibold">
                The Official Website of
              </p>
              <Image
                height={800}
                width={800}
-               className='h-[30%] w-full object-cover  '
+               className="max-md:h-[120px] md:h-[15rem] w-full object-contain  "
                alt="Our Art is Yours Logo"
-               src={'/Our Art Is Yours logo.png'}
+               src={"/Our Art Is Yours logo.png"}
              />
-           <p className="max-lg:text-sm text-xl font-semibold">
-             Browse our official Art, graphic novels, comics, Tv shows,
-             mechandise and more...{" "}
-           </p>
+             <p className="max-lg:text-sm text-xl text-white  font-semibold">
+               Browse our official Art, graphic novels, comics, Tv shows,
+               mechandise and more...{" "}
+             </p>
            </div>
-
            <Link href={"/main"}>
              <button className="bg-red-500 md:px-20 uppercase hover:bg-white hover:text-red-500 hover:scale-105 transition-all duration-500 transform rounded-sm max-md:px-8 py-3 mt-5 max-md:w-full">
                unlock now
@@ -368,28 +370,8 @@ const page = () => {
            <span className="text-red-500">who</span> we are
          </h1>
          <p className="text-sm text-white">
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-           distinctio molestias quibusdam dolorum temporibus dolores ducimus
-           culpa quo. Ea perferendis dolores impedit exercitationem voluptas
-           sapiente accusantium blanditiis voluptatem dolorem similique!
-           <span
-             onClick={() => dropdownFunc(1)}
-             className={`  text-white/60 ${dropDown === 1 ? "hidden" : ""}`}
-           >
-             {" "}
-             read moree..
-           </span>
-           <span
-             className={`transform ease-in-out duration-300 transition-all ${dropDown === 1 ? "opacity-100 " : "opacity-0 max-md:hidden "}`}
-           >
-             {" "}
-             lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-             mollitia voluptates quia architecto dignissimos quis nemo quam?
-             Ullam in architecto assumenda quod natus, soluta neque, tempora
-             sunt id nisi omnis nostrum quas at dolores maxime sint quae
-             accusantium corporis iste consectetur fugiat autem aliquam? Porro
-             hic voluptates magnam dignissimos pariatur?
-           </span>
+           Our Art is yours is a creative brand encompassing culture, top notch
+           storytelling, education and entertainment.
          </p>
        </div>
 
@@ -400,11 +382,9 @@ const page = () => {
            {" "}
            what we <span className="text-red-500">offer</span>{" "}
          </h1>
-         <p className="text-sm text-right">
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque
-           distinctio molestias quibusdam dolorum temporibus dolores ducimus
-           culpa quo. Ea perferendis dolores impedit exercitationem voluptas
-           sapiente accusantium blanditiis voluptatem dolorem similique!{" "}
+         <p className="text-sm text-center">
+           Our Services cater to diverse audiences including fans, authors,
+           creators, publishers, brands, studios and businesses
            <span
              onClick={() => dropdownFunc(2)}
              className={`text-white/60 ${dropDown === 2 ? "hidden" : ""}`}
@@ -412,41 +392,135 @@ const page = () => {
              {" "}
              read moree..
            </span>
-           <span
-             className={`transform ease-in-out duration-300 transition-all ${dropDown === 2 ? "opacity-100 " : "opacity-0 max-md:hidden "}`}
+           <div
+             className={`transform ease-in-out duration-300 text-center transition-all ${dropDown === 2 ? "opacity-100 " : "opacity-0 max-md:hidden "}`}
            >
              {" "}
-             lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
-             mollitia voluptates quia architecto dignissimos quis nemo quam?
-             Ullam in architecto assumenda quod natus, soluta neque, tempora
-             sunt id nisi omnis nostrum quas at dolores maxime sint quae
-             accusantium corporis iste consectetur fugiat autem aliquam? Porro
-             hic voluptates magnam dignissimos pariatur?
-           </span>{" "}
+             <div>
+               <p>
+                 <span className="text-red-600">
+                   COMIC BOOK AND GRAPHIC NOVEL PRODUCTION
+                 </span>{" "}
+                 <br /> We bring your stories to life and help you sell more
+                 copies, get more views and build a fan base.
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">FULL ART</span> <br /> We handle
+                 cover design, panelling, inking, coloring and lettering so your
+                 novel looks like it belongs on OurArt is yours shelf.
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">IP DEVELOPMENT </span> <br /> We
+                 create concept art, characters and story board packages to
+                 visualize your world and bring your original IP to life.
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">ANIMATION SERVICES</span> <br />
+                 We create trailers, snippets, pitch videos and social
+                 animations that get views, shares and sales. To make you stand
+                 out in an overcrowded market.
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">2D/3D ANIMATIONS</span> <br />
+                 For books, videos and games
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">EXPLAINER VIDEOS</span> <br />
+                 Social media animations, Reels
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">FULL ANIMATED EPISODES</span>{" "}
+                 <br />
+                 Cartoons, Music videos, Marketing Ads
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <div>
+               <p>
+                 <span className="text-red-600">MARKETING</span> <br />
+                 We help you launch your products through our services, so you
+                 can either publish as you wish or pitch to publishers, decks
+                 and businesses with pro quality art and get them to say "YES!!"
+                 to you.
+               </p>
+
+               <div className="flex ">images</div>
+             </div>
+             <p>
+               We create for everyone in the story ecosystem. From individual
+               fans to global studios, our services support every stage of
+               storytelling.
+             </p>
+           </div>{" "}
          </p>
        </div>
 
        <div className="md:mt-4 flex justify-center items-center flex-col">
          {/* this will have two cols with the video on one side and the message on the other */}
-         <h1 className="text-2xl mt-2 md:my-4 uppercase font-semibold">
-           {" "}
-           meet <span className="text-red-500">our</span> founder
-         </h1>
+
+         <div className='flex items-center justify-center mt-2 md:my-4 '>
+           <img
+             src="/Our Art Is Yours logo.png"
+             alt=""
+             className="h-[50px] w-full object-cover"
+           />
+           <h1 className=" font-semibold">  Here's why</h1>
+         </div>
 
          <div className="md:grid flex flex-col-reverse md:grid-cols-2 p-3 md:p-5 gap-5">
            <div className="flex flex-col space-y-1">
-             <h3 className="text-sm font-semibold uppercase">
-               What let you to pursue art as a creative outlet ?{" "}
+             <h3 className="text-sm font-semibold uppercase text-red-600">
+               WHO ARE YOU AND WHY SHOULD I CARE? ?{" "}
              </h3>
              <p className="text-sm leading-6">
-               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
-               rem, magnam deleniti voluptate officiis aspernatur? Tenetur
-               deleniti voluptate eaque corporis ipsum enim beatae eveniet,
-               rerum autem sequi alias modi debitis ex, doloremque earum, fugiat
-               ratione numquam doloribus! Temporibus, quibusdam! Natus officiis
-               suscipit dolorem laborum nam aspernatur. Maiores maxime,
-               obcaecati ratione, porro earum voluptas iusto provident nam, quae
-               tempore et aliquam? <a href="#">read more....</a>{" "}
+               His name's are Nnabuife Uzoma Raphael. He is an Artist, Athlete
+               and Aspiring Entrepreneur. Ralph was led to pursue art as a
+               creative outlet because ever since he was a child he had always
+               had a desire to create or replicate an image, object, certain
+               body motion, facial expression or scene in some way, shape or
+               form, using a paper, a wall or any available format within his
+               reach. With his goal then, being to get a feel of what it
+               required to get through the process of the Art's creation and
+               also to see what it's aesthetic would be like on the Art's
+               completion. Ralph is a freelance Artist which uses different
+               mediums such as pencils, pens, colours and digital mediums.
+               Creativity as we know is broad with different forms, but his
+               major area of interests are in Drawing and Painting, Creative
+               Writing, Comic books, Graphic Novels, Graffiti, Fashion,
+               Animation and Music. He is a versatile artist who generates ideas
+               about anything or from any area of life. But in his own words " I
+               think my favorite theme of expressionwould be visual
+               storytelling, because Illustration is credibility to my art,
+               music is my energy to life, and fashion is an extension of my
+               creativity". With this creativity Ralph hopes to educate,
+               energize and entertain. Now that you've gotten to know who he is.
+               Connect with him, I can assure you, Ralph is worth the time.{" "}
+               <a href="#">read more....</a>{" "}
              </p>
            </div>
 
@@ -489,7 +563,7 @@ const page = () => {
        ></video>
        <div className="absolute top-0 inset-0 bg-black/70"></div>
        <div className="absolute  flex flex-col inset-0 items-center  top-0 gap-10">
-         <h1 className="text-2xl uppercase font-semibold mt-5 text-center">
+         <h1 className="text-2xl uppercase font-semibold mt-5 text-red-600 text-center">
            Available Now
          </h1>
 
@@ -549,10 +623,9 @@ const page = () => {
              our mission
            </h1>
            <p className="text-sm">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-             Recusandae harum, quae rerum sequi sunt impedit eum aspernatur
-             commodi deserunt ab repellendus nemo quasi voluptatibus non,
-             laudantium, cum quod sed? Numquam?
+             To balance creativity with commercial demands and adapt to ever
+             changing customer preferences by leveraging art and technology to
+             stay ahead in a competitive market.
            </p>
          </div>
          <div className="p-4 max-md:p-2 flex flex-col gap-3 text-center">
@@ -560,15 +633,15 @@ const page = () => {
              our vision
            </h1>
            <p className="text-sm">
-             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-             Recusandae harum, quae rerum sequi sunt impedit eum aspernatur
-             commodi deserunt ab repellendus nemo quasi voluptatibus non,
-             laudantium, cum quod sed? Numquam?
+             To become a world class brand that would revolutionize the creative
+             industry with emphasis on different art forms or mediums. To push
+             the boundaries of Animation technology and CGI by encompassing
+             culture, top notch storytelling, education and entertainment.
            </p>
          </div>
        </div>
 
-       <div className="p-4  max-md:p-2 flex flex-col gap-6 ">
+       {/* <div className="p-4  max-md:p-2 flex flex-col gap-6 ">
          <div className="mb-5  lg:px-8 flex flex-col gap-2 ">
            <h1 className="text-2xl uppercase font-semibold mt-5 text-center">
              What we offer
@@ -582,7 +655,7 @@ const page = () => {
            </p>
          </div>
 
-         {firstFooterList.map((item, index) => {
+         {/* {firstFooterList.map((item, index) => {
            return (
              <div key={index} className="grid grid-cols-2   ">
                <h2 className="text-md md:text-xl font-semibold mb-3">
@@ -605,24 +678,14 @@ const page = () => {
                </div>
              </div>
            );
-         })}
-       </div>
+         })} */}
+       {/* </div>  */}
 
        <Link href={"/main"} className="w-full flex md:mt-5 max-md:px-20 ">
          <button className="bg-red-500 md:px-20 uppercase hover:bg-white hover:text-red-500 lg:hover:scale-105 lg:transition-all lg:duration-500 lg:transform rounded-sm py-3  max-md:text-sm mt-5 max-md:w-full mx-auto uppercase">
            get started
          </button>
        </Link>
-     </section>
-
-     {/* section five */}
-     <section className="bg-black/20">
-       <div className="border w-full border-red-800/2 my-15"></div>
-       <div className="flex flex-col gap-6">
-         <h1 className="text-2xl uppercase font-semibold text-center">
-           Connect with us on
-         </h1>
-       </div>
      </section>
    </main>
  );

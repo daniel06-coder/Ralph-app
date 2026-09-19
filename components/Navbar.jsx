@@ -102,7 +102,7 @@ const Navbar = () => {
       <div className=" z-10 w-full ">
         {/* FirstNav */}
         <nav
-          className={`flex bg-[#161616]/50 backdrop-blur-sm  justify-between items-center px-4 py-2  h-12 w-full    `}
+          className={`flex bg-[#161616]/50 backdrop-blur-sm  justify-between items-center px-4 py-2  h-15 w-full    `}
         >
           {/* ${slider ? "" : "shadow-xl shadow-black/30"} */}
           <button
@@ -145,13 +145,13 @@ const Navbar = () => {
         ? "translate-y-12  opacity-100 mb-9 shadow-md shadow-gray-950/30 pointer-events-auto"
         : "-translate-y-full opacity-0 pointer-events-none pb-auto  "} */}
         <nav
-          className={` z-10 relative w-full transform bg-[#161616]/50 backdrop-blur-sm flex duration-500 transition-all  justify-between items-center h-10 max-md:h-9 px-2 py-6  `}
+          className={` z-10 relative w-full transform bg-[#161616]/50 backdrop-blur-sm flex duration-500 transition-all  justify-between items-center h-15 max-md:h-9 px-2 py-8  `}
         >
-          <div className="absolute left-1/2 transform -translate-x-1/2 m-auto  max-md:text-xs">
+          <div className="absolute left-1/2 transform -translate-x-1/2 m-auto  max-md:text-xs ">
             <Image
               height={800}
               width={800}
-              className="h-25 w-full object-contain  "
+              className="h-[50px]  w-full object-cover  "
               alt="Our Art is Yours Logo"
               src={"/Our Art Is Yours logo.png"}
             />
@@ -191,7 +191,7 @@ const Navbar = () => {
                 href={`/auth/signin?callbackUrl=${pathname}`}
                 className="border md:px-4 px-2 md:py-[6px] py-1  rounded-full border-white hover:bg-black/10 justify-center items-center flex "
               >
-                <button className="md:text-xs text-[0.6rem] ">Sign Up</button>
+                <button className="text-sm ">Sign Up</button>
               </Link>
               {/* on small screen since only the sign up button is available let the login option be on the poped up modal */}
               <Link

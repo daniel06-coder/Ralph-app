@@ -1,5 +1,7 @@
+import { X } from 'lucide-react';
 import Link from 'next/link'
 import React from 'react'
+import { FaFacebook, FaLinkedin, FaTiktok, FaXTwitter, FaYoutube } from 'react-icons/fa6';
 
 const Footer = () => {
 
@@ -60,43 +62,69 @@ const Footer = () => {
     ]
 
   return (
-    <main className='bg-[#161616] p-3 flex min-h-70 w-full relative bottom-0'>
-
-        <div className='grid lg:gap-6 lg:space-x-5 grid-cols-1 w-full md:grid-cols-3 lg:grid-cols-5 md:m-auto py-6 max-md:gap-5'>
-
+    <main className="bg-[#161616] p-3 flex min-h-70 w-full relative bottom-0">
+      <div className="grid lg:gap-6 lg:space-x-5 grid-cols-1 w-full md:grid-cols-3 lg:grid-cols-5 md:m-auto py-6 max-md:gap-5">
         {firstFooterList.map((item, index) => {
-            return(
-                <div key={index} className='max-md:text-center'>
-                    <h2 className='text-xl font-semibold md:mb-3 mb-2 max-lg:mt-3'>
-                    {item.label}
-                    </h2>
+          return (
+            <div key={index} className="max-md:text-center">
+              <h2 className="text-xl font-semibold md:mb-3 mb-2 max-lg:mt-3">
+                {item.label}
+              </h2>
 
-
-        
-                <div  className='flex flex-col justify-center px-1  w-full   gap-1'>
+              <div className="flex flex-col justify-center px-1  w-full   gap-1">
                 {item.subItems.map((sub, subIndex) => {
-                    return(
-                        <Link href={"/"} key={subIndex}  className='duration-300 transition-all text-sm w-full md:flex text-center  lg:hover:scale-105 '>
-                            {sub.label}
-                            {sub.icon}
-                        </Link> 
-                       
-                    )
-                } )}
-                
-                </div>
-                </div>
-            )
-        } )}
+                  return (
+                    <Link
+                      href={"/"}
+                      key={subIndex}
+                      className="duration-300 transition-all text-sm w-full md:flex text-center  lg:hover:scale-105 "
+                    >
+                      {sub.label}
+                      {sub.icon}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
 
-        <div className='lg:absolute lg:bottom-0 lg:right-30  gap-2 flex flex-col items-center justify-center border-[1px] rounded-sm border-red-500/60 p-2 mb-3'>
-            <p className='text-sm'>&copy; Company Name | Designed & Built with React. </p>
-            <p className='text-sm'>All Rights Reserved </p>
+        <div className="lg:absolute lg:bottom-0 lg:right-30  gap-2 flex flex-col items-center justify-center border-[1px] rounded-sm border-red-500/60 p-2 mb-3">
+          <p className="text-sm">
+            &copy; Company Name | Designed & Built with React.{" "}
+          </p>
+          <p className="text-sm">All Rights Reserved </p>
         </div>
-      
-        </div>
+        <section className="">
+          <div className="border  border-red-800/2 "></div>
+          <div className="flex flex-col gap-2">
+            <h1 className="text-md uppercase font-semibold text-center">
+              Connect with us on
+            </h1>
+
+            <div className="flex justify-center w-full items-center gap-4 p-2">
+              <Link href={"https://x.com/RenaissanceRAF"}>
+                <FaXTwitter className="size-6" />
+              </Link>
+              <Link href={"tiktok.com/@renaissanceraf"}>
+                <FaTiktok className="size-6" />
+              </Link>
+              <Link
+                href={"https://www.facebook.com/profile.php?id=61588762185334"}
+              >
+                <FaFacebook className="size-6" />
+              </Link>
+              <Link
+                href={"https://youtube.com/@ourartisyours?si=m8H5R6xkwgXCSkrs"}
+              >
+                <FaYoutube className="size-6" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-  )
+  );
 }
 
 export default Footer

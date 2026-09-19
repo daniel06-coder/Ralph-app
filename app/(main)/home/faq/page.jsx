@@ -173,8 +173,9 @@ const page = () => {
             width={800}
             height={800}
             src={"/phoneslide1.png"}
+            // src={"/img/SmokerArtwork.jpeg"}
             alt="hhp"
-            className="opacity-50"
+            className="opacity-50 w-full h-full object-cover"
           />
         </div>
 
