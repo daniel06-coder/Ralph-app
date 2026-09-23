@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 // import Image from 'next/image';
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -13,24 +13,140 @@ import { AiOutlineGlobal } from "react-icons/ai";
 
 const page = () => {
   const [openFaq, setFaqOpen] = useState(false);
+  const [fullscreen, setFullscreen] = useState(null)
+ const handleFullScreen = (src, type = "image") => {
+   setFullscreen(fullscreen?.src === src ? null : { src, type });
+ };
+
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setFullscreen(null);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
 
   const dropDown = (i) => {
     setFaqOpen(openFaq === i ? false : i);
   };
 
+
+
+
+  const services = [
+    {
+      title: "COMIC BOOK AND GRAPHIC NOVEL PRODUCTION",
+      description:
+        " We bring your stories to life and help you sell more copies, get more views and build a fan base.",
+      media: [
+        { src: "/img/image (7).jpeg", type: "image" },
+        { src: "/img/image (8).jpeg", type: "image" },
+        { src: "/img/image (9).jpeg", type: "image" },
+        { src: "/img/image (10).jpeg", type: "image" },
+      ],
+      scrollable: true, // first section is scrollable
+    },
+    {
+      title: "SCRIPT WRITING",
+      description:
+        "We turn your imagination into storylines that readers can't put down and we turn them into worlds that people can see, feel and buy.",
+      media: [
+        { src: "/img/image (19).jpeg", type: "image" },
+        { src: "/img/image (18).jpeg", type: "image" },
+      ],
+    },
+    {
+      title: "FULL ART",
+      description:
+        "We handle cover design, panelling, inking, coloring and lettering so your novel looks like it belongs on OurArt is yours shelf",
+      media: [
+        { src: "/img/image (42).jpeg", type: "image" },
+        { src: "/img/image (30).jpeg", type: "image" },
+        { src: "/img/image (34).jpeg", type: "image" },
+        { src: "/img/image (19).jpeg", type: "image" },
+        { src: "/img/image (18).jpeg", type: "image" },
+        { src: "/img/image (17).jpeg", type: "image" },
+        { src: "/img/image (16).jpeg", type: "image" },
+        { src: "/img/image (15).jpeg", type: "image" },
+        { src: "/img/image (6).jpeg", type: "image" },
+      ],
+    },
+    {
+      title: "IP DEVELOPMENT",
+      description:
+        " We create concept art, characters and story board packages to visualize your world and bring your original IP to life.",
+      media: [
+        { src: "/img/image (11).jpeg", type: "image" },
+        { src: "/img/image (12).jpeg", type: "image" },
+        { src: "/img/image (13).jpeg", type: "image" },
+        { src: "/img/image (14).jpeg", type: "image" },
+        { src: "/img/image (20).jpeg", type: "image" },
+        { src: "/img/image (21).jpeg", type: "image" },
+        { src: "/img/image (22).jpeg", type: "image" },
+        { src: "/img/image (23).jpeg", type: "image" },
+        { src: "/img/image (24).jpeg", type: "image" },
+        { src: "/img/image (25).jpeg", type: "image" },
+        { src: "/img/image (26).jpeg", type: "image" },
+        { src: "/img/image (27).jpeg", type: "image" },
+      ],
+    },
+    {
+      title: "ANIMATION SERVICES",
+      description:
+        " We create trailers, snippets, pitch videos and social animations that get views, shares and sales. To make you stand out in an overcrowded market.",
+      media: [
+        { src: "/milesmoralesPhone.mp4", type: "video" },
+        { src: "/milesmoralesPhone.mp4", type: "video" },
+      ],
+    },
+    {
+      title: "2D/3D ANIMATIONS",
+      description: " For books, videos and games",
+      media: [{ src: "/miles.mp4", type: "video" }],
+    },
+    {
+      title: "EXPLAINER VIDEOS",
+      description: "  Social media animations, Reels",
+      media: [{ src: "/tatevid.mp4", type: "video" }],
+    },
+    {
+      title: "FULL ANIMATED EPISODES",
+      description: "Cartoons, Music videos, Marketing Ads",
+      media: [
+        { src: "/milesmoralesPhone.mp4", type: "video" },
+        { src: "/milesmoralesPhone.mp4", type: "video" },
+      ],
+    },
+    {
+      title: "MARKETING",
+      description:
+        "We help you launch your products through our services, so you can either publish as you wish or pitch to publishers, decks and businesses with pro quality art and get them to say 'YES!!' to you",
+      media: [{ src: "/tatevid.mp4", type: "video" }],
+    },
+  ];
+
+
+  // const images = [
+  //   { id: "comic-1", src: "/img/image (22).jpeg" },
+  //   { id: "comic-2", src: "/img/image (22).jpeg" },
+  //   { id: "comic-3", src: "/img/image (22).jpeg" },
+  //   { id: "comic-4", src: "/img/image (31).jpeg" },
+  // ];
+
   const creativeRolesandProf = [
     {
       label: "Uzoma Rapheal",
       role: "Founder",
-      img: "/profile/user.jpeg",
+      img: "/profile/ralphimage.jpeg",
       url: "/main",
       founder: true,
       fSmall: true,
     },
     {
-      label: "Uzoma Rapheal",
-      role: "Founder",
-      img: "/profile/user.jpeg",
+      label: "Anyanwu Daniel",
+      role: "Developer",
+      img: "/profile/DanielA.jpeg",
       url: "/main",
     },
     {
@@ -40,18 +156,18 @@ const page = () => {
       url: "/main",
     },
     {
+      label: "",
+      role: "",
+      img: "/profile/user.jpeg",
+      url: "/main",
+    },
+    {
       label: "Uzoma Rapheal",
       role: "Founder",
       img: "/profile/ralphimage.jpeg",
       url: "/main",
       founder: true,
       fLarge: true,
-    },
-    {
-      label: "Anyanwu Daniel",
-      role: "Developer",
-      img: "/profile/DanielA.jpeg",
-      url: "/main",
     },
     {
       label: "",
@@ -95,244 +211,75 @@ const page = () => {
     <main className="">
       {/* first section */}
       <section className="">
-        <div className="relative max-lg:grid max-lg:grid-cols-2 max-md:grid-cols-1 max-lg:gap-2 px-2  outline">
-          {/* the first card is the div below */}
-          <div className="max-lg:relative max-lg:top-25 max-md:top-0 flex flex-col justify-start py-3 lg:w-[35%]   max-md:shadow-none md:shadow md:shadow-black/90  ">
-            <div className=" flex flex-col max-lg:flex-col-reverse ">
-              <div className="flex flex-col  max-md:hidden lg:items-start item-center gap-2  px-7  lg:py-4  w-full lg:border-b ">
-                <h2 className="text-[2rem] uppercase">The Best Team</h2>
-                <h2 className="text-[2rem]">Presents</h2>
-                <img src="/Our Art Is Yours logo.png" alt="" className="md:h-[7rem] md:w-[14rem] object-contain" />
-              </div>
+        <div
+          className={`flex flex-col w-full p-2 max-md:items-center max-md:justify-center`}
+        >
+          <div className="flex flex-col mb-2">
+            <h2 className="uppercase text-red-500 ">Who We Are</h2>
 
-              <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
-                <h2 className="text-xl uppercase font-bold py-2">
-                  <span className="text-red-700 "> What </span> We Offer
-                </h2>
-
-                <div className=" flex gap-2 flex-col ">
-                  {/* Video below */}
-                  <div className="relative flex ">
-                    <video
-                      src="/miles.mp4"
-                      className="h-full w-full"
-                      autoPlay
-                    ></video>
-                    <div className="absolute top-15 inset-0 space-y-2 lg:space-y-6 flex items-center flex-col  ">
-                      <FaCirclePlay className="text-red-700 text-[4rem]" />
-                      <button className="text-sm uppercase">
-                        Click to watch full video
-                      </button>
-                    </div>
-                  </div>
-
-                  <p>
-                    Our Services cater to diverse audiences including fans,
-                    authors, creators, publishers, brands, studios and
-                    businesses
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p>
+              Our Services cater to diverse audiences including fans, authors,
+              creators, publishers, brands, studios and businesses
+            </p>
           </div>
-
-          {/* the second card that will need an absolute to the parend cards relative */}
-          <div className="lg:absolute lg:w-[35%]  lg:right-110 bg-[#191919]/60 lg:top-18 backdrop-blur-xs lg:shadow-white-700/10 lg:shadow-[0px_0px_3px] md:shadow md:shadow-black/90 lg:border-none  ">
-            {/* second cards content */}
-            <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
-              <h2 className="text-xl uppercase font-bold py-2">
-                Who <span className="text-red-700 "> We </span> Are
-              </h2>
-
-              <div className=" flex gap-2 flex-col ">
-                {/* Video below */}
-                <div className="relative flex ">
-                  <video
-                    src="/miles.mp4"
-                    className="h-full w-full"
-                    autoPlay
-                  ></video>
-                  <div className="absolute top-15 inset-0 space-y-2 lg:space-y-6 flex items-center flex-col  ">
-                    <FaCirclePlay className="text-red-700 text-[4rem]" />
-                    <button className="text-sm uppercase">
-                      Click to watch full video
-                    </button>
-                  </div>
-                </div>
-
+          <div className="mb-2">
+            {services.map((service, index) => (
+              <div key={index} className="mb-2">
                 <p>
-                  Our Art is yours is a creative brand encompassing culture, top
-                  notch storytelling, education and entertainment.
+                  <span className="text-red-500">{service.title}</span>
+                  <br />
+                  {service.description}
                 </p>
-              </div>
-            </div>
 
-            <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
-              <h2 className="text-xl uppercase font-bold py-2">
-                What <span className="text-red-700 "> We </span> Do
-              </h2>
-
-              <div className=" flex gap-2 flex-col ">
-                {/* Video below */}
-                <div className="relative flex ">
-                  <video
-                    src="/miles.mp4"
-                    className="h-full w-full"
-                    autoPlay
-                  ></video>
-                  <div className="absolute top-15 inset-0 space-y-2 lg:space-y-6 flex items-center flex-col  ">
-                    <FaCirclePlay className="text-red-700 text-[4rem]" />
-                    <button className="text-sm uppercase">
-                      Click to watch full video
-                    </button>
-                  </div>
-                </div>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  omnis aspernatur doloribus in deserunt modi accusantium illo
-                  similique.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* third card that will have a relative instead of absolute*/}
-          <div className="md:relative  lg:w-[35%] max-lg:w-full max-lg:left-60 max-lg:bottom-2  lg:left-216 bg-[#191919]/60 lg:bottom-110 backdrop-blur-xs lg:shadow-white-700/10 lg:shadow-[0px_0px_3px] md:shadow md:shadow-black/90 lg:border-none  ">
-            {/* second cards content */}
-            <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
-              <h2 className="text-xl uppercase font-bold py-2">
-                Who We <span className="text-red-700 "> Are </span>
-              </h2>
-
-              <div className=" flex gap-2 flex-col ">
-                {/* Video below */}
-                <div className="relative flex ">
-                  <video
-                    src="/miles.mp4"
-                    className="h-full w-full"
-                    autoPlay
-                  ></video>
-                  <div className="absolute top-15 inset-0 space-y-2 lg:space-y-6 flex items-center flex-col  ">
-                    <FaCirclePlay className="text-red-700 text-[4rem]" />
-                    <button className="text-sm uppercase">
-                      Click to watch full video
-                    </button>
-                  </div>
-                </div>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  omnis aspernatur doloribus in deserunt modi accusantium illo
-                  similique.
-                </p>
-              </div>
-            </div>
-
-            <div className="lg:pr-15 px-7 max-md:px-1 lg:pl-4  py-4  flex flex-col gap-3">
-              <h2 className="text-xl uppercase font-bold py-2">
-                What We <span className="text-red-700 "> Do </span>
-              </h2>
-
-              <div className=" flex gap-2 flex-col ">
-                {/* Video below */}
-                <div className="relative flex ">
-                  <video
-                    src="/miles.mp4"
-                    className="h-full w-full"
-                    autoPlay
-                  ></video>
-                  <div className="absolute top-15 inset-0 space-y-2 lg:space-y-6 flex items-center flex-col  ">
-                    <FaCirclePlay className="text-red-700 text-[4rem]" />
-                    <button className="text-sm uppercase">
-                      Click to watch full video
-                    </button>
-                  </div>
-                </div>
-
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                  omnis aspernatur doloribus in deserunt modi accusantium illo
-                  similique.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* our location and FaQ directory button below, this should be flexed  */}
-          <div className=" max-lg:hidden absolute bottom-65 w-[63%] gap-10 shadow  shadow-black/90 flex justify-between py-3 px-5  ">
-            <div className="flex flex-col w-[50%]">
-              <h2 className="text-xl uppercase font-bold py-2">
-                BUSSINESS LOCATION{" "}
-              </h2>
-              <p className="text-sm">
-                From the day of it's inception, our business is located here on
-                our business official website at{" "}
-                <a href="#" className="underlined">
-                  www.ourartisyours.com.{" "}
-                </a>{" "}
-                On our different social media handles and on internet web
-                stores. In the coming years, while still being on the internet,
-                we would have key offices all over africa.
-              </p>
-            </div>
-
-            <div className="flex flex-col w-[50%] gap-5">
-              <h2 className="text-xl uppercase font-bold py-2">
-                Frequently Asked Question
-              </h2>
-              {/* copy one faq question and put here */}
-
-              <div className="flex flex-col gap-2 justify-center border px-2 py-2">
-                <div className=" flex items-center w-full ">
-                  <span className="font-semibold max-lg:text-sm text-lg  w-[95%] ">
-                    How do i navigate the website
-                  </span>
-
-                  <button
-                    className="border-none outline-none  outline-none"
-                    onClick={() => dropDown(1)}
-                  >
-                    {openFaq === 1 ? (
-                      <CiCirclePlus className="font-bold text-xl" />
-                    ) : (
-                      <CiCircleMinus className="font-semibold text-xl" />
+                <div className="flex gap-1   justify-center w-full  items-center py-1 ">
+                  <div className="overflow-x-auto flex gap-2 px-2 scrollbar-hide">
+                    {service.media.map((item, i) =>
+                      item.type === "video" ? (
+                        <video
+                          key={i}
+                          src={item.src}
+                          onClick={() => handleFullScreen(item.src, "video")}
+                          className="md:h-[200px] h-[130px] w-full object-contain cursor-pointer"
+                          autoPlay
+                          muted
+                          loop
+                        />
+                      ) : (
+                        <img
+                          key={i}
+                          src={item.src}
+                          alt=""
+                          onClick={() => handleFullScreen(item.src, "image")}
+                          className="md:h-[200px] h-[130px] w-full object-contain cursor-pointer"
+                        />
+                      ),
                     )}
-                  </button>
+                  </div>
                 </div>
-
-                <p
-                  className={`transition-all duration-300 text-sm ease-in-out transform   ${
-                    openFaq === 1
-                      ? " opacity-0 max-h-0 mb-auto -translate-y-1 pointer-events-none "
-                      : "opacity-100 max-h-full mb-auto translate-y-1 pointer-events-auto "
-                  } `}
-                >
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quis, dicta! Ipsam incidunt delectus quibusdam obcaecati magni
-                  dignissimos eum excepturi suscipit voluptates optio. Iusto
-                  tempora quia et, aliquam necessitatibus autem doloremque.
-                </p>
-
-                {/* <div className='border w-xl mt-3'></div> */}
               </div>
+            ))}
 
-              <div className="flex flex-col gap-1">
-                <Link
-                  href={"/home/faq"}
-                  className="flex w-full hover:bg-white/20 transform transition-all duration-500  items-center px-2 border py-2 pointer"
-                >
-                  <button className="text-lg max-lg:text-sm w-[95%]  text-left">
-                    Click to View More
-                  </button>
-                  <FaLongArrowAltRight className="text-xl max-lg:text-sm" />
-                </Link>
+            {/* <div className="flex gap-1   justify-center w-full  items-center py-1 ">
+              <div className="overflow-x-auto flex gap-2 px-2 scrollbar-hide">
+                {images.map((img) => (
+                  <img
+                    key={img.id}
+                    src={img.src}
+                    alt=""
+                    onClick={() => handleFullScreen(img.src)} // ✅ store src in state
+                    className="md:h-[200px] h-[130px] w-full object-contain cursor-pointer"
+                  />
+                ))}
               </div>
-            </div>
+            </div> */}
           </div>
-        </div>
-
+          <p>
+            We create for everyone in the story ecosystem. From individual fans
+            to global studios, our services support every stage of storytelling.
+          </p>
+        </div>{" "}
         {/* our location and FaQ directory button below, this is for small and medium screens  */}
-        <div className=" lg:hidden max-lg:relative  w-full gap-1 max-md:gap-4 shadow  shadow-black/90 max-lg:flex max-lg:justify-between max-md:flex-col  p-3  ">
+        <div className="  max-lg:relative  w-full gap-1 max-md:gap-4 shadow  shadow-black/90 max-lg:flex max-lg:justify-between max-md:flex-col  p-3  ">
           <div className="flex flex-col md:w-[50%]">
             <h2 className="text-xl max-md:text-center uppercase font-bold py-2">
               Our Location
@@ -669,6 +616,40 @@ const page = () => {
           </div>
         </div>
       </section>
+
+      {fullscreen && (
+        <div
+          className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-sm flex items-center justify-center"
+          onClick={() => setFullscreen(null)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-2xl z-50"
+            onClick={() => setFullscreen(null)}
+          >
+            ✕
+          </button>
+
+          {fullscreen.type === "video" ? (
+            // ✅ video fullscreen
+            <video
+              src={fullscreen.src}
+              className="max-h-screen max-w-screen object-contain"
+              onClick={(e) => e.stopPropagation()}
+              autoPlay
+              controls // ✅ show controls in fullscreen
+              loop
+            />
+          ) : (
+            // ✅ image fullscreen
+            <img
+              src={fullscreen.src}
+              alt="fullscreen"
+              className="max-h-screen max-w-screen object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          )}
+        </div>
+      )}
     </main>
   );
 };

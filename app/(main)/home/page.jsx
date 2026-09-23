@@ -12,155 +12,155 @@ const page = () => {
 
   const availablePro = [
     {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/wolverine.jpg" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
-  
-    {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/comic.png" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
-          
-          {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/wolverine.jpg" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-          },
-          {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/hulk.jpg" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-          },
-          {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/hulk.jpg" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-          },
-      
-          {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/hulk.jpg" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-          },
-       {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/comic.png" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-         },
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (39).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
 
-          {
-            likeIcon:<FcLike/>,
-            likeLabel:"2.8k",
-            bookIcon:<CiBookmarkPlus />,
-            bookIconTwo:<CiBookmarkCheck /> ,
-            img:"/wolverine.jpg" ,
-            label:"diddy do it",
-            date:"12/7/2025",
-                },
-        
-          {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/hulk.jpg" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
- {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/wolverine.jpg" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
     {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/hulk.jpg" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (18).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+
     {
-      likeIcon:<FcLike/>,
-      likeLabel:"2.8k",
-      bookIcon:<CiBookmarkPlus />,
-      bookIconTwo:<CiBookmarkCheck /> ,
-      img:"/hulk.jpg" ,
-      label:"diddy do it",
-      date:"12/7/2025",
-          },
-  // {
-  //     likeIcon:<FcLike/>,
-  //     likeLabel:"2.8k",
-  //     bookIcon:<CiBookmarkPlus />,
-  //     bookIconTwo:<CiBookmarkCheck /> ,
-  //     img:"/comic.png" ,
-  //     label:"diddy do it",
-  //     date:"12/7/2025",
-  //         },
-  //   {
-  //     likeIcon:<FcLike/>,
-  //     likeLabel:"2.8k",
-  //     bookIcon:<CiBookmarkPlus />,
-  //     bookIconTwo:<CiBookmarkCheck /> ,
-  //     img:"/hulk.jpg" ,
-  //     label:"diddy do it",
-  //     date:"12/7/2025",
-  //         },
-  //   {
-  //     likeIcon:<FcLike/>,
-  //     likeLabel:"2.8k",
-  //     bookIcon:<CiBookmarkPlus />,
-  //     bookIconTwo:<CiBookmarkCheck /> ,
-  //     img:"/hulk.jpg" ,
-  //     label:"diddy do it",
-  //     date:"12/7/2025",
-  //         },
-  // {
-  //     likeIcon:<FcLike/>,
-  //     likeLabel:"2.8k",
-  //     bookIcon:<CiBookmarkPlus />,
-  //     bookIconTwo:<CiBookmarkCheck /> ,
-  //     img:"/comic.png" ,
-  //     label:"diddy do it",
-  //     date:"12/7/2025",
-  //         },
-  ]
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (3).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (34).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (36).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (29).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/img/image (40).jpeg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/wolverine.jpg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/hulk.jpg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/wolverine.jpg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/hulk.jpg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    {
+      likeIcon: <FcLike />,
+      likeLabel: "2.8k",
+      bookIcon: <CiBookmarkPlus />,
+      bookIconTwo: <CiBookmarkCheck />,
+      img: "/hulk.jpg",
+      label: "diddy do it",
+      date: "12/7/2025",
+    },
+    // {
+    //     likeIcon:<FcLike/>,
+    //     likeLabel:"2.8k",
+    //     bookIcon:<CiBookmarkPlus />,
+    //     bookIconTwo:<CiBookmarkCheck /> ,
+    //     img:"/comic.png" ,
+    //     label:"diddy do it",
+    //     date:"12/7/2025",
+    //         },
+    //   {
+    //     likeIcon:<FcLike/>,
+    //     likeLabel:"2.8k",
+    //     bookIcon:<CiBookmarkPlus />,
+    //     bookIconTwo:<CiBookmarkCheck /> ,
+    //     img:"/hulk.jpg" ,
+    //     label:"diddy do it",
+    //     date:"12/7/2025",
+    //         },
+    //   {
+    //     likeIcon:<FcLike/>,
+    //     likeLabel:"2.8k",
+    //     bookIcon:<CiBookmarkPlus />,
+    //     bookIconTwo:<CiBookmarkCheck /> ,
+    //     img:"/hulk.jpg" ,
+    //     label:"diddy do it",
+    //     date:"12/7/2025",
+    //         },
+    // {
+    //     likeIcon:<FcLike/>,
+    //     likeLabel:"2.8k",
+    //     bookIcon:<CiBookmarkPlus />,
+    //     bookIconTwo:<CiBookmarkCheck /> ,
+    //     img:"/comic.png" ,
+    //     label:"diddy do it",
+    //     date:"12/7/2025",
+    //         },
+  ];
 
  const images = [
    { img: "/slide1.jpg", phoneImg: "/img/image (33).jpeg" },
@@ -385,117 +385,31 @@ const page = () => {
          <p className="text-sm text-center">
            Our Services cater to diverse audiences including fans, authors,
            creators, publishers, brands, studios and businesses
-           <span
-             onClick={() => dropdownFunc(2)}
-             className={`text-white/60 ${dropDown === 2 ? "hidden" : ""}`}
+           <a href='/home/about'
+             className={`text-white/60`}
            >
              {" "}
-             read moree..
-           </span>
-           <div
-             className={`transform ease-in-out duration-300 text-center transition-all ${dropDown === 2 ? "opacity-100 " : "opacity-0 max-md:hidden "}`}
-           >
-             {" "}
-             <div>
-               <p>
-                 <span className="text-red-600">
-                   COMIC BOOK AND GRAPHIC NOVEL PRODUCTION
-                 </span>{" "}
-                 <br /> We bring your stories to life and help you sell more
-                 copies, get more views and build a fan base.
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">FULL ART</span> <br /> We handle
-                 cover design, panelling, inking, coloring and lettering so your
-                 novel looks like it belongs on OurArt is yours shelf.
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">IP DEVELOPMENT </span> <br /> We
-                 create concept art, characters and story board packages to
-                 visualize your world and bring your original IP to life.
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">ANIMATION SERVICES</span> <br />
-                 We create trailers, snippets, pitch videos and social
-                 animations that get views, shares and sales. To make you stand
-                 out in an overcrowded market.
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">2D/3D ANIMATIONS</span> <br />
-                 For books, videos and games
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">EXPLAINER VIDEOS</span> <br />
-                 Social media animations, Reels
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">FULL ANIMATED EPISODES</span>{" "}
-                 <br />
-                 Cartoons, Music videos, Marketing Ads
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <div>
-               <p>
-                 <span className="text-red-600">MARKETING</span> <br />
-                 We help you launch your products through our services, so you
-                 can either publish as you wish or pitch to publishers, decks
-                 and businesses with pro quality art and get them to say "YES!!"
-                 to you.
-               </p>
-
-               <div className="flex ">images</div>
-             </div>
-             <p>
-               We create for everyone in the story ecosystem. From individual
-               fans to global studios, our services support every stage of
-               storytelling.
-             </p>
-           </div>{" "}
+             Continue Reading...
+           </a>
+           
          </p>
        </div>
 
        <div className="md:mt-4 flex justify-center items-center flex-col">
          {/* this will have two cols with the video on one side and the message on the other */}
 
-         <div className='flex items-center justify-center mt-2 md:my-4 '>
+         <div className="flex items-center justify-center mt-2 md:my-4 ">
            <img
              src="/Our Art Is Yours logo.png"
              alt=""
              className="h-[50px] w-full object-cover"
            />
-           <h1 className=" font-semibold">  Here's why</h1>
          </div>
 
          <div className="md:grid flex flex-col-reverse md:grid-cols-2 p-3 md:p-5 gap-5">
            <div className="flex flex-col space-y-1">
              <h3 className="text-sm font-semibold uppercase text-red-600">
-               WHO ARE YOU AND WHY SHOULD I CARE? ?{" "}
+               Here's why
              </h3>
              <p className="text-sm leading-6">
                His name's are Nnabuife Uzoma Raphael. He is an Artist, Athlete
@@ -504,23 +418,7 @@ const page = () => {
                had a desire to create or replicate an image, object, certain
                body motion, facial expression or scene in some way, shape or
                form, using a paper, a wall or any available format within his
-               reach. With his goal then, being to get a feel of what it
-               required to get through the process of the Art's creation and
-               also to see what it's aesthetic would be like on the Art's
-               completion. Ralph is a freelance Artist which uses different
-               mediums such as pencils, pens, colours and digital mediums.
-               Creativity as we know is broad with different forms, but his
-               major area of interests are in Drawing and Painting, Creative
-               Writing, Comic books, Graphic Novels, Graffiti, Fashion,
-               Animation and Music. He is a versatile artist who generates ideas
-               about anything or from any area of life. But in his own words " I
-               think my favorite theme of expressionwould be visual
-               storytelling, because Illustration is credibility to my art,
-               music is my energy to life, and fashion is an extension of my
-               creativity". With this creativity Ralph hopes to educate,
-               energize and entertain. Now that you've gotten to know who he is.
-               Connect with him, I can assure you, Ralph is worth the time.{" "}
-               <a href="#">read more....</a>{" "}
+               reach.<a href="#">read more....</a>{" "}
              </p>
            </div>
 

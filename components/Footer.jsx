@@ -8,7 +8,8 @@ const Footer = () => {
     const firstFooterList = [
         {label: "Creative Art", icon: "/next.svg" , subItems:
             [
-                {label: 'Artworks', icon:"🎨", url: "/" },
+                {label: 'Artworks', icon:"🎨", url: "/home/artworks" },
+                {label: 'Manga', icon:"", url: "/discover-stories/manga" },
                 {label: 'Comics', icon:"💥", url: "/" },
                 {label: 'Graphic Novels', icon:"📚", url: "/" },
                 {label: 'Stories', icon:"⚔️", url: "/" },
@@ -106,7 +107,7 @@ const Footer = () => {
               <Link href={"https://x.com/RenaissanceRAF"}>
                 <FaXTwitter className="size-6" />
               </Link>
-              <Link href={"tiktok.com/@renaissanceraf"}>
+              <Link href={"https//www.tiktok.com/@renaissanceraf"}>
                 <FaTiktok className="size-6" />
               </Link>
               <Link
